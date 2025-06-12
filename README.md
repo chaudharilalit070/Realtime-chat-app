@@ -1,75 +1,89 @@
 # realtime-room-chat
   🗨️ A real-time room chat application using React + Vite, Spring Boot, and MongoDB with WebSocket support.
 
- #Output Screen
- 
-![image](https://github.com/user-attachments/assets/0628fbf1-3c2f-4035-b798-3b3c3ca62f31)
 
+# 🗨️ RealTime Room Chat App
 
-  📦 Project Overview
+⚡ *A modern, real-time chat platform that lets users join rooms, send messages instantly, and collaborate live — powered by WebSockets.*
 
-Realtime Chat App is a full-stack chat application designed to enable seamless real-time communication between users. The application is built using Vite + React on the frontend, Spring Boot on the backend, and MongoDB as the primary NoSQL database. It uses Tailwind CSS for responsive UI styling and WebSockets for real-time messaging.
+Built with **React + Vite** for a blazing-fast frontend and **Spring Boot + MongoDB** backend for scalable, low-latency real-time messaging.
 
-The application provides features such as real-time messaging, user authentication, online status indicators, and persistent message storage. The backend APIs are built in Java using Spring Boot, with MongoDB providing scalable and fast data operations.
+---
 
-Realtime Chat App is a portfolio project demonstrating modern full-stack web development using a reactive UI and robust backend architecture.
+## 📸 Output Screens
 
-⸻
+**Output Screens**
+1️⃣ Room Creation & Joining
 
-🚀 Technologies Used
+2️⃣ Messaging Interface
 
+3️⃣ Real-time Room Chatting with Users
 
-	•	Frontend: React, Vite, Tailwind CSS
-	•	Backend: Java, Spring Boot
-	•	Database: MongoDB
-	•	Real-time Communication: WebSockets
-	•	Other Tools: JWT, REST APIs, Axios
+4️⃣ Typing Indicators & Online Status
 
+5️⃣ Avatar Support
 
+![Output](https://github.com/user-attachments/assets/0628fbf1-3c2f-4035-b798-3b3c3ca62f31)
 
-## ✈️ Scope Plane
+---
 
-### 🧠 Feature Planning
+## 📦 Project Overview
 
-* 🏠 Public and private chat rooms
-* 🕓 Message timestamps
-* ✅ Message delivery status indicators
+**RealTime Room Chat** is a multi-user chat application that supports real-time room-based messaging using WebSocket (STOMP over SockJS), React for frontend UI, and Spring Boot + MongoDB for backend persistence and message distribution.
 
+Inspired by user psychology, it focuses on **speed**, **clarity**, and **real-time responsiveness**. Users can:
 
-## 🧾 Content Requirement Planning
+* Create and join rooms
+* Send/receive messages live
+* See who’s online
+* Know who’s typing
+* Share images (optional upgrade)
 
-### 📝 Text
+---
 
-* Chat messages
-* User notifications
-* System prompts
+## 🚀 Technologies Used
 
-### 🖼️ Images
+| Layer          | Stack                                                                |
+| -------------- | -------------------------------------------------------------------- |
+| 🎨 Frontend    | React, Vite, Tailwind CSS, Axios, STOMP.js, SockJS                   |
+| 🧠 Backend     | Spring Boot, WebSocket (STOMP), MongoDB                              |
+| 🔐 Auth (opt)  | Clerk/Auth0/Firebase (optional module)                               |
+| 💬 Messaging   | WebSocket (STOMP protocol over SockJS)                               |
+| 🧰 Other Tools | JWT, Environment Variables (.env), React Router, Toast Notifications |
 
-* User avatars
-* Image messages shared in chat
+---
 
-### 📹 Videos
+## 🎯 Core Features
 
-* ❌ Not supported currently
+* 👤 Create or Join Chat Rooms
+* 📩 Send/Receive messages in real-time
+* 🧑‍🤝‍🧑 Multiple users in one room
+* 🔴 Online user indicators
+* ✍️ Typing status notification
+* 🖼️ Image message (optional)
+* 🎨 Clean UI + Tailwind responsive design
 
-
-## 🌐 Integrating Content Strategy & SEO
-
-* 🔍 Not applicable for real-time app
-* 🏷️ Basic metadata included for better web representation
-
+---
 
 ## 🙋‍♂️ User Stories
 
-> "As a user, I want to send and receive messages instantly so I can communicate in real-time."
+> 🗣️ *As a user, I want to join a chat room and send messages instantly.*
+> 👀 *As a team, we want to collaborate and discuss in real-time.*
+> 📡 *As a developer, I need low-latency chat powered by WebSocket technology.*
 
+---
 
-## 🏗️ Structure Plane
+## 🔄 User Flow Diagram
 
-### 🕹️ Interaction Design
+```mermaid
+graph TD;
+    A[👤 Login] --> B[🏠 Home - Create / Join Room]
+    B --> C[💬 Enter Room Interface]
+    C --> D[✍️ Type and Send Message]
+    D --> E[📩 Real-time Broadcast to Room Members]
+    E --> F[📜 Messages Stored in MongoDB]
+```
 
-* Single Page Application (SPA) with a dynamic, real-time chat interface
 
 
 ## 🔄 User Flow Diagram
@@ -80,6 +94,8 @@ graph TD;
     B --> C[🚪 Enter Chat Room]
     C --> D[💬 Send/Receive Messages]
 ```
+
+
 
 
 
@@ -96,16 +112,160 @@ Output Screens
 
 
 
-## 🙏 Acknowledgements
 
-We would like to express our gratitude to the following technologies and resources that made this real-time chat application possible:
+## 🛠️ Installation & Setup Guide
 
-* ⚛️ **React** – For building a fast, interactive, single-page user interface.
-* 🎨 **Tailwind CSS** – For providing a clean and responsive design with utility-first styling.
-* ☕ **Spring Boot** – For simplifying the backend architecture and enabling robust REST APIs.
-* 🧩 **MongoDB** – For flexible, document-based data storage for rooms and messages.
-* 🔌 **STOMP over SockJS** – For enabling reliable, bidirectional real-time messaging between client and server.
-* 🧠 **Open Source Community** – For invaluable documentation, discussions, and support across GitHub, Stack Overflow, and official docs.
+### 📁 Clone the Repository
 
+```bash
+git clone https://github.com/your-username/realtime-room-chat.git
+cd realtime-room-chat
+```
+
+---
+
+## 🧑‍💻 Project Structure
+
+```bash
+realtime-room-chat/
+│
+├── backend/               # Spring Boot Project
+│   ├── src/               # Java Source Code
+│   └── pom.xml            # Maven Build File
+│
+├── frontend/              # React + Vite Frontend
+│   ├── src/               # Components & Pages
+│   └── vite.config.js     # Vite Config
+│
+└── README.md              # Documentation
+```
+
+---
+
+## ⚙️ Prerequisites
+
+| Tool       | Version      | Required For        |
+| ---------- | ------------ | ------------------- |
+| Node.js    | >= 18.x      | Frontend            |
+| npm / yarn | >= 9.x / 1.x | Frontend            |
+| Java       | >= 17        | Backend             |
+| Maven      | >= 3.8.x     | Backend Build       |
+| MongoDB    | >= 5.x       | Message Persistence |
+
+---
+
+## 🎨 Frontend Setup
+
+```bash
+cd frontend
+npm install
+npm run dev   # Open http://localhost:5173
+```
+
+---
+
+## ☕ Backend Setup
+
+1. Set MongoDB config in `application.properties`:
+
+```properties
+spring.data.mongodb.uri=mongodb://localhost:27017/chatapp
+```
+
+2. Run Spring Boot backend:
+
+```bash
+cd backend
+./mvnw spring-boot:run  # or mvn spring-boot:run
+```
+
+Backend runs at: `http://localhost:8080`
+
+---
+
+## 🌐 WebSocket Endpoint
+
+* Endpoint: `/ws`
+* STOMP subscription: `/topic/room/{roomId}`
+* Message send: `/app/chat.sendMessage`
+
+---
+
+## 📦 Environment Variables (Frontend)
+
+Create `.env` in the **frontend** folder:
+
+```env
+VITE_API_BASE=http://localhost:8080
+```
+
+---
+
+## 📂 Build for Production
+
+### Frontend
+
+```bash
+npm run build
+```
+
+### Backend
+
+```bash
+./mvnw clean package
+```
+
+---
+
+## 📌 Common Issues & Fixes
+
+| Issue                           | Solution                                         |
+| ------------------------------- | ------------------------------------------------ |
+| `vite not recognized`           | Install with `npm i -g vite`                     |
+| `WebSocket not connecting`      | Ensure backend is running + CORS config enabled  |
+| `Messages not ordered properly` | Sort via timestamps in frontend or backend       |
+| `Send fires multiple times`     | Debounce input or clean `useEffect` dependencies |
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## 🙌 Acknowledgements
+
+Special thanks to the developers and community contributors:
+
+* ⚛️ React + Vite — blazing-fast UI dev
+* 🎨 Tailwind CSS — utility-first design system
+* ☕ Spring Boot — robust backend platform
+* 🛢️ MongoDB — document-based, scalable storage
+* 🔌 WebSocket + STOMP — real-time communication protocol
+* 🧠 Open Source Libraries — for WebSocket clients and rich UI tools
+
+---
+
+## 🤝 Contributing
+
+Want to add more features or fix bugs? Please:
+
+1. Fork this repo
+2. Create a new feature branch
+3. Make your changes
+4. Submit a pull request
+
+---
+
+## 📞 Contact
+
+Have questions or want to connect?
+
+* 📧 **Email**: [chaudharilalit717@gmail.com](mailto:chaudharilalit717@gmail.com)
+* 📱 **Phone**: +91 7058097985
+* 🔗 **LinkedIn**: [lalit-chaudhari-a16a10246](https://www.linkedin.com/in/lalit-chaudhari-a16a10246)
+
+---
 
 
