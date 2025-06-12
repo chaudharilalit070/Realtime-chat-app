@@ -113,7 +113,7 @@ Output Screens
 ### 📁 Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/realtime-room-chat.git
+git clone https://github.com/chaudharilalit070/realtime-room-chat.git
 cd realtime-room-chat
 ```
 
