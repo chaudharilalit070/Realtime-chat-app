@@ -1,6 +1,3 @@
-# realtime-room-chat
-  🗨️ A real-time room chat application using React + Vite, Spring Boot, and MongoDB with WebSocket support.
-
 
 # 🗨️ RealTime Room Chat App
 
@@ -19,9 +16,7 @@ Built with **React + Vite** for a blazing-fast frontend and **Spring Boot + Mong
 
 3️⃣ Real-time Room Chatting with Users
 
-4️⃣ Typing Indicators & Online Status
-
-5️⃣ Avatar Support
+4️⃣ Avatar Support
 
 ![Output](https://github.com/user-attachments/assets/0628fbf1-3c2f-4035-b798-3b3c3ca62f31)
 
